@@ -23,7 +23,7 @@ const HomeSections = () => {
         className="max-w-5xl mx-auto px-6 text-center"
       >
         <p className="text-2xl md:text-3xl lg:text-4xl text-gray-900 leading-[1.4] font-semibold mb-12">
-          We’re a team of seasoned marketers and strategists combining over 30 years of experience in web design, branding, and digital growth — now enhanced with cutting-edge AI tools and automation. We help businesses streamline operations, attract qualified leads, and scale profitably without burning out their teams.
+          We’re a team of seasoned marketers and strategists combining over 30 years of experience in web design, branding, and digital growth - now enhanced with cutting-edge AI tools and automation. We help businesses streamline operations, attract qualified leads, and scale profitably without burning out their teams.
         </p>
         <button 
           onClick={() => navigate('/about')}

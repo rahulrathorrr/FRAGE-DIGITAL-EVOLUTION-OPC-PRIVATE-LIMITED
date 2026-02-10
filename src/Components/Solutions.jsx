@@ -248,7 +248,7 @@ const Solutions = () => {
           <span className="hero-label">Our Solutions</span>
           <h1>Your Complete Ecosystem of AI-Powered Advertising & Automation Tools</h1>
           <p className="hero-desc">
-            We provide end-to-end advertising intelligence — from campaign automation to creative generation, analytics, performance optimization, and workflow automation.
+            We provide end-to-end advertising intelligence - from campaign automation to creative generation, analytics, performance optimization, and workflow automation.
           </p>
           {/* LINK TO CONTACT PAGE */}
           <Link to="/contact" className="btn-primary">Get Started</Link>

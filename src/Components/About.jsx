@@ -270,7 +270,7 @@ const AboutUs = () => {
               <span className="label">Our Vision</span>
               <h2>Global Leadership</h2>
               <p>
-                To become a global leader in AI‑powered advertising software — helping millions of businesses evolve with smarter systems.
+                To become a global leader in AI‑powered advertising software - helping millions of businesses evolve with smarter systems.
               </p>
             </div>
           </div>
