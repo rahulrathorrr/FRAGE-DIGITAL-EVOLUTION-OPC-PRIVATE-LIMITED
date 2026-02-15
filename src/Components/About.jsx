@@ -216,9 +216,7 @@ const AboutUs = () => {
           <p>
             Our company is founded on strong digital expertise, strategic thinking, and a passion for innovation. We exist to bridge the gap between traditional marketing and the future of automation.
           </p>
-          <p>
-            We bring together a skilled team of developers, automation architects, designers, and marketers who believe in delivering measurable, scalable, and sustainable results for clients.
-          </p>
+         
         </div>
       </section>
 

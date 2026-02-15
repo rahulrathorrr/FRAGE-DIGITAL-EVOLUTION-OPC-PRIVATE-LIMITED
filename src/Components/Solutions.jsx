@@ -474,17 +474,7 @@ const Solutions = () => {
         </div>
       </section>
 
-      {/* FOOTER CTA */}
-      <section className="container" style={{padding: '100px 0', textAlign: 'center'}}>
-        <div className="animate-box">
-            <h2 style={{fontSize: '2.5rem', marginBottom: '20px'}}>Ready to Evolve?</h2>
-            <p style={{maxWidth: '600px', margin: '0 auto 40px auto', color: '#666'}}>
-                Explore our solutions and see how we can leap your business forward with smarter systems and sharper marketing.
-            </p>
-            {/* LINK TO CONTACT PAGE */}
-            <Link to="/contact" className="btn-primary">Contact Us Today</Link>
-        </div>
-      </section>
+     
 
     </div>
   );

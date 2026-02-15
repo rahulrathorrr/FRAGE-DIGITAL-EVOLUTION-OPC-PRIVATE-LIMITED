@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Mail, MapPin, Info, FileText, ShieldAlert } from 'lucide-react'; // Make sure you have lucide-react or use SVGs
+import { Mail, MapPin, Upload } from 'lucide-react'; 
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -71,15 +71,22 @@ const Contact = () => {
           font-size: 3rem;
           font-weight: 800;
           line-height: 1.1;
-          margin-bottom: 10px;
+          margin-bottom: 16px;
           letter-spacing: -1px;
+        }
+
+        .sub-header {
+          font-size: 1.1rem;
+          color: var(--text-gray);
+          margin-bottom: 40px;
+          line-height: 1.6;
         }
 
         .company-legal-name {
           font-size: 1.1rem;
           font-weight: 700;
           color: var(--primary-green);
-          margin-bottom: 30px;
+          margin-bottom: 24px;
           display: block;
           text-transform: uppercase;
           letter-spacing: 1px;
@@ -91,7 +98,6 @@ const Contact = () => {
           border-radius: 16px;
           border: 1px solid var(--border);
           box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-          margin-bottom: 30px;
         }
 
         .info-row {
@@ -121,32 +127,6 @@ const Contact = () => {
           font-weight: 500;
           line-height: 1.5;
           color: var(--primary-dark);
-        }
-
-        /* Terms Section on Left */
-        .terms-box {
-          margin-top: 30px;
-          padding-top: 30px;
-          border-top: 1px solid var(--border);
-        }
-
-        .term-item {
-          margin-bottom: 20px;
-        }
-
-        .term-title {
-          font-size: 0.95rem;
-          font-weight: 700;
-          margin-bottom: 6px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-        }
-
-        .term-desc {
-          font-size: 0.9rem;
-          color: var(--text-gray);
-          line-height: 1.5;
         }
 
         /* RIGHT SIDE FORM STYLES */
@@ -193,6 +173,20 @@ const Contact = () => {
           box-shadow: 0 0 0 4px rgba(130, 188, 65, 0.1);
         }
 
+        .radio-group {
+          display: flex;
+          gap: 20px;
+          margin-top: 8px;
+        }
+
+        .radio-option {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 0.95rem;
+          cursor: pointer;
+        }
+
         .btn-submit {
           width: 100%;
           background: var(--primary-green);
@@ -234,9 +228,13 @@ const Contact = () => {
 
       <div className="container split-layout">
         
-        {/* --- LEFT SIDE: COMPANY INFO --- */}
+        {/* --- LEFT SIDE: CLEAN COMPANY INFO --- */}
         <div className="info-section animate-up">
-          <h1>Get In Touch</h1>
+          <h1>Let’s Build the Future of Your Advertising</h1>
+          <p className="sub-header">
+            Whether you're launching a new project or scaling an existing one, we’re ready to help.
+          </p>
+          
           <span className="company-legal-name">FRAGE DIGITAL EVOLUTION</span>
           
           <div className="info-card">
@@ -259,38 +257,6 @@ const Contact = () => {
                 <span className="info-label">Email Us</span>
                 <p className="info-text">support@fragedigievolution.in</p>
               </div>
-            </div>
-          </div>
-
-          {/* Terms & Policies Snippets */}
-          <div className="terms-box">
-            <h3 style={{fontSize: '1.2rem', marginBottom: '20px'}}>Policy Highlights</h3>
-            
-            <div className="term-item">
-              <div className="term-title">
-                <FileText size={16} color="#82BC41"/> Service Engagement
-              </div>
-              <p className="term-desc">
-                All project terms, deliverables, and pricing will be defined in a written agreement before project initiation.
-              </p>
-            </div>
-
-            <div className="term-item">
-              <div className="term-title">
-                <ShieldAlert size={16} color="#82BC41"/> Limitation of Liability
-              </div>
-              <p className="term-desc">
-                We are not liable for indirect or incidental damages resulting from website or service usage.
-              </p>
-            </div>
-
-            <div className="term-item">
-              <div className="term-title">
-                <Info size={16} color="#82BC41"/> Modifications
-              </div>
-              <p className="term-desc">
-                We reserve the right to update these terms at any time.
-              </p>
             </div>
           </div>
         </div>
@@ -317,7 +283,7 @@ const Contact = () => {
                   <input type="text" placeholder="John Doe" required />
                 </div>
 
-                {/* Email */}
+                {/* Email Address */}
                 <div className="form-group">
                   <label>Email Address</label>
                   <input type="email" placeholder="john@company.com" required />
@@ -335,13 +301,13 @@ const Contact = () => {
                   <input type="text" placeholder="Acme Corp" />
                 </div>
 
-                {/* Website */}
+                {/* Website URL */}
                 <div className="form-group">
                   <label>Website URL</label>
                   <input type="url" placeholder="https://www.example.com" />
                 </div>
 
-                {/* How Did You Hear */}
+                {/* How Did You Hear About Us? */}
                 <div className="form-group">
                   <label>How Did You Hear About Us?</label>
                   <select>
@@ -367,16 +333,33 @@ const Contact = () => {
                   </select>
                 </div>
 
-                {/* Description */}
+                {/* Detailed Project Description */}
                 <div className="form-group full-width">
                   <label>Detailed Project Description</label>
                   <textarea rows="5" placeholder="Tell us about your goals, timeline, and budget..." required></textarea>
+                </div>
+
+                {/* Preferred communication method */}
+                <div className="form-group full-width">
+                  <label>Preferred Communication Method</label>
+                  <div className="radio-group">
+                    <label className="radio-option">
+                      <input type="radio" name="commMethod" value="Email" defaultChecked /> Email
+                    </label>
+                    <label className="radio-option">
+                      <input type="radio" name="commMethod" value="Phone" /> Phone
+                    </label>
+                    <label className="radio-option">
+                      <input type="radio" name="commMethod" value="WhatsApp" /> WhatsApp
+                    </label>
+                  </div>
                 </div>
 
                 {/* File Attachment */}
                 <div className="form-group full-width">
                   <label>File Attachment (Briefs/RFPs)</label>
                   <div style={{border: '2px dashed #E2E8F0', padding: '30px', textAlign: 'center', borderRadius: '12px', cursor: 'pointer', background: '#F8FAFC'}}>
+                    <Upload size={24} color="#82BC41" style={{margin: '0 auto 10px'}} />
                     <span style={{color: '#82BC41', fontWeight: '600'}}>Click to Upload</span>
                     <br/>
                     <span style={{fontSize: '0.85rem', color: '#94a3b8'}}>or drag and drop files here (Max 10MB)</span>
