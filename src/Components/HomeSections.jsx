@@ -23,12 +23,12 @@ const HomeSections = () => {
         className="max-w-6xl mx-auto px-6"
       >
         <div className="text-center mb-16">
-          <h2 className="text-blue-600 font-bold tracking-widest uppercase mb-4">— Introduction</h2>
+          <h2 className="text-blue-600 font-bold tracking-widest uppercase mb-4">- Introduction</h2>
           <h3 className="text-4xl md:text-6xl font-black text-gray-900 leading-tight mb-8">
             The Future of Advertising Starts Here
           </h3>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Digital advertising has become more complex than ever. With ever-changing algorithms, intense competition, and shifting consumer behavior, brands need more than manual strategies — they need intelligent systems.
+            Digital advertising has become more complex than ever. With ever-changing algorithms, intense competition, and shifting consumer behavior, brands need more than manual strategies - they need intelligent systems.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ const HomeSections = () => {
           {[
             { 
               title: "AI-Driven Precision", 
-              desc: "Our systems don’t just automate—they learn, analyze, and optimize continuously.",
+              desc: "Our systems don’t just automate-they learn, analyze, and optimize continuously.",
               icon: <Cpu size={40} className="text-blue-600" /> 
             },
             { 
